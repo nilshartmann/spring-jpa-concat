@@ -13,5 +13,4 @@ public interface BookRepository extends Repository<Book, String> {
                 where :t is null or b.title like concat(:t, '%')
             """)
     List<Book> findWithTitle(String t);
-
 }
